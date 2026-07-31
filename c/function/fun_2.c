@@ -1,20 +1,29 @@
 /*
-	2) with parameter and no return 	
-
+	1) without paramter and no retur	
+	int/void func-name(){
+		
+	}
+	func-name()
 */
 
 #include<stdio.h>
 #include<conio.h>
 
-void multi(a,b){
-	int multi;
-	multi = a * b;
-	printf("\nSum : %d",multi);
+void demo(){
+	int i;
+	for(i=1;i<=20;i++){
+		printf("*");
+	}
 }
 
 
 void main()
 {
-	multi(4,5);
+	demo();	
+		printf("\n");
+	
+	demo();
+
+	
 	getch();
 }
