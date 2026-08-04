@@ -9,9 +9,9 @@ using namespace std;
         	 
         	 public:
         	 	
-        	 	void enrty(){
+        	 	void entry(){
         	 		
-        	 		cout<<" Enter your name : " ;
+        	 		cout<<" Enter your name : ";
         	 		getline(cin,name);
         	 		
         	 		cout<<" enter a bank balance: ";
@@ -51,7 +51,7 @@ using namespace std;
 					cout<<" updated balance : "<<updatedbalance2;	
 				}
 					
-					
+					cout<<" \n\n  current balance :"<<updatedbalance2;
 				}
     
 	 };
@@ -60,7 +60,7 @@ using namespace std;
 int main(){
 	
 	Sbi ved;
-	ved.enrty();
+	ved.entry();
 	ved.showdeatils();
 	ved.credit();
 	ved.debit();

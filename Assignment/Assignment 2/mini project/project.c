@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-//#define DAYS 7
+#define DAYS 7
 
 int main()
 {
