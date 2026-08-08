@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <conio.h>
 
-int main() {
+int main(){
     int arr[10];
     int i, j, temp;
     int min, max;
@@ -44,7 +44,7 @@ int main() {
     for(i = 0; i < 10; i++) {
         printf("%d ", arr[i]);
     }
-
+   
     printf("\n");
 
     if((mean - min) < (max - mean))
