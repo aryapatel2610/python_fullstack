@@ -1,0 +1,4 @@
+SELECT *
+FROM Restaurants
+WHERE city = 'Ahmedabad'
+AND rating > 4.0;
