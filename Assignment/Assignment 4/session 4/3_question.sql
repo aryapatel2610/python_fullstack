@@ -1,0 +1,6 @@
+use instaclone;
+SELECT *
+FROM Playlist
+WHERE genre = 'Pop'
+AND play_count > 100
+ORDER BY play_count DESC;
