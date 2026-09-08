@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Effect</title>
+
+    <style>
+        .main {
+            height: 400px;
+            width: 700px;
+            border: 2px solid;
+            margin: 200px auto;
+            padding-left: 30px;
+            padding-bottom: 30px;
+
+            position: relative;
+            overflow: hidden;
+        }
+
+        .main::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+}
+
+        
+        .main::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+
+            background-image: url("./hannah-morgan-ycVFts5Ma4s-unsplash.jpg");
+            background-size: cover;
+            background-position: left center;
+
+            transition: transform 0.8s ease;
+            z-index: -1;
+        }
+
+        
+        .main:hover::before {
+            transform: translateX(20px);
+        }
+
+        .demo {
+            color: azure;
+            margin-top: 180px;
+            margin-right: 150px;
+            font-size: 30px;
+
+            position: relative;
+            z-index: 2;
+        }
+
+      
+        .demo1 {
+            height: 350px;
+            width: 650px;
+            border: 2px solid white;
+
+            position: absolute;
+            top: 25px;
+            left: 25px;
+
+            opacity: 0;
+            transition: 0.5s;
+            z-index: 2;
+        }
+
+        .demo2 {
+            color: azure;
+            margin-top: 180px;
+            margin-right: 50px;
+            font-size: 20px;
+            letter-spacing: 10px;
+
+            opacity: 0;
+            transition: 0.5s;
+        }
+
+        
+        .main:hover .demo1 {
+            opacity: 1;
+        }
+
+       
+        .main:hover .demo2 {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main">
+
+        <div class="demo" align="right">
+            <b style="color: red;">F</b>ALL AHEAD
+        </div>
+
+        <div class="demo1">
+            <div class="demo2" align="right">
+                NEW ARRIVALS
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
