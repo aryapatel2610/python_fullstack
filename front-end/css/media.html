@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+            height: 400px;
+            background: lightcoral;
+        }
+
+            /* min table */
+        @media only screen and (max-width:1140px) {
+            .main {
+                background: rgb(166, 187, 7);
+                width: 50%;
+            }
+        }
+
+          /* min table */
+        @media only screen and (max-width:992px) {
+            .main {
+                background: lightgrey;
+                width: 100%;
+            }
+        }
+
+        /* table */
+        @media only screen and (max-width:768px) {
+            .main {
+                background: red;
+            }
+        }
+
+        /* mobile screen 0- 576 */
+        @media only screen and (max-width:576px) {
+            .main {
+                background: lightgreen;
+                height: 200px;
+                width: 200px;
+            }
+        }
+        .demo{
+            background:url("./hannah-morgan-ycVFts5Ma4s-unsplash.jpg")
+        
+
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="main">
+        <div class="demo"></div>
+
+    </div>
+</body>
+
+</html>
