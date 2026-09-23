@@ -1,0 +1,201 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Task 1: Meta viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Responsive Product Card</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f1f3f6;
+            margin: 0;
+            padding: 30px;
+        }
+
+        /* Product Card */
+        .product-card {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            display: flex;
+            gap: 40px;
+            border-radius: 5px;
+            box-shadow: 0 2px 8px #ccc;
+        }
+
+        .product-image {
+            width: 350px;
+            height: 350px;
+            object-fit: contain;
+        }
+
+        .product-details {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .product-name {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .rating {
+            display: inline-block;
+            background: green;
+            color: white;
+            padding: 6px 10px;
+            border-radius: 4px;
+        }
+
+        .price {
+            font-size: 30px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        .description {
+            font-size: 17px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .buy-btn {
+            background: #ff9f00;
+            color: white;
+            border: none;
+            padding: 14px 30px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+
+        .buy-btn:hover {
+            background: #fb641b;
+        }
+
+
+        /* Task 3: 1200px breakpoint */
+        @media only screen and (max-width: 1200px) {
+            .product-card {
+                padding: 25px;
+            }
+
+            .product-name {
+                font-size: 26px;
+            }
+
+            .description {
+                font-size: 16px;
+            }
+        }
+
+
+        /* Task 3: 900px breakpoint */
+        @media only screen and (max-width: 900px) {
+            .product-card {
+                padding: 20px;
+                gap: 20px;
+            }
+
+            .product-image {
+                width: 280px;
+                height: 280px;
+            }
+
+            .product-name {
+                font-size: 23px;
+            }
+
+            .price {
+                font-size: 26px;
+            }
+        }
+
+
+        /* Task 2 + Task 3: 600px breakpoint */
+        @media only screen and (max-width: 600px) {
+
+            /* Change horizontal layout to vertical */
+            .product-card {
+                flex-direction: column;
+                padding: 15px;
+                gap: 10px;
+            }
+
+            .product-image {
+                width: 100%;
+                height: 250px;
+            }
+
+            .product-details {
+                padding: 10px;
+            }
+
+            .product-name {
+                font-size: 21px;
+            }
+
+            .price {
+                font-size: 24px;
+            }
+
+            .description {
+                font-size: 15px;
+            }
+
+            .buy-btn {
+                width: 100%;
+            }
+
+            body {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="product-card">
+
+        <img
+            class="product-image"
+            src="/S04/samsung.jpg"
+            alt="Smartphone"
+        >
+
+        <div class="product-details">
+
+            <h1 class="product-name">
+                Samsung Galaxy Smartphone
+            </h1>
+
+            <span class="rating">4.4 ★</span>
+
+            <p class="price">₹24,999</p>
+
+            <p class="description">
+                Powerful smartphone with a high-quality display,
+                excellent camera, long battery life and fast performance.
+            </p>
+
+            <button class="buy-btn">
+                Add to Cart
+            </button>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

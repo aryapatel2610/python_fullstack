@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+<!--
+        NON-SEMANTIC VERSION:
+
+        <div>
+            <span>Movie Review</span>
+            <div>
+                <span>Home</span>
+                <span>Movies</span>
+                <span>Reviews</span>
+            </div>
+
+            <div>
+                <span>Avengers: Endgame</span>
+                <span>⭐⭐⭐⭐⭐</span>
+                <span>
+                    Avengers: Endgame is an entertaining superhero movie
+                    with an emotional story.
+                </span>
+            </div>
+
+            <div>
+                <span>© 2026 Movie Reviews</span>
+            </div>
+        </div>
+        -->
+
+
+        <!-- SEMANTIC REFACTORED VERSION -->
+
+        <article>
+
+            <header>
+                <h2>Avengers: Endgame</h2>
+                <p>Movie Review</p>
+            </header>
+
+            <nav aria-label="Movie navigation">
+                <a href="#">Home</a> |
+                <a href="#">Movies</a> |
+                <a href="#">Reviews</a>
+            </nav>
+
+            <section>
+                <h3>Review</h3>
+
+                <p>Rating: ⭐⭐⭐⭐⭐</p>
+
+                <p>
+                    Avengers: Endgame is an entertaining superhero movie
+                    with an emotional story and impressive action sequences.
+                </p>
+            </section>
+
+            <footer>
+                <p>© 2026 Movie Reviews. All rights reserved.</p>
+            </footer>
+
+        </article>
+
+    </main>
+</body>
+</html>

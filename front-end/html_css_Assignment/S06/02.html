@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Poster Grid</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .movie-grid {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 50px;
+        }
+
+        .movie {
+            background-color: #f32b2b;
+            position: relative;
+            width: 200px;
+            border: 1px solid #ddd;
+            color: white;
+        }
+
+        .movie img {
+            width: 100%;
+            display: block;
+        }
+
+        .movie-title {
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .new-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+
+            padding: 6px 10px;
+            background-color: red;
+            color: white;
+
+            font-weight: bold;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+     <h1 style="text-align:center; color: #e21815;">BookMyShow Movies</h1>
+
+    <div class="movie-grid">
+
+        <!-- Poster with New badge -->
+        <div class="movie">
+            <img src="/S06/hanuman" alt="Movie 1">
+
+            <span class="new-badge">NEW</span>
+
+            <div class="movie-title">
+                Hanuman Ansh
+            </div>
+        </div>
+
+        <div class="movie">
+            <img src="/S06/mirzapur" alt="Movie 2">
+
+            <div class="movie-title">
+                Mirzapur
+            </div>
+        </div>
+
+        <div class="movie">
+            <img src="/S06/toxic" alt="Movie 3">
+
+            <div class="movie-title">
+                Toxic
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

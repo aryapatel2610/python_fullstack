@@ -1,0 +1,155 @@
+@media only screen and (max-width:1160px) {}
+
+@media only screen and (max-width:992px) {}
+
+@media only screen and (max-width:768px) {
+
+    .header-content .header-p {
+        width: 80%;
+    }
+
+    .menu-content .menu-p {
+        width: 90%;
+    }
+
+    .card-menu .row {
+        display: block;
+    }
+
+    .card-menu .row .col {
+        width: 80%;
+        margin: 20px auto;
+    }
+
+    .sec3 .row {
+        display: block;
+    }
+
+    .sec3 .row .col1 {
+        width: 100%;
+        padding: 0px 20px 0px 50px;
+    }
+
+    /* .sec3 .row .col{ */
+    /* width: 80%; */
+    /* text-align: center; */
+    /* margin: 0px 20px 0px 70px; */
+
+    .sec3 .row .col {
+        width: 100%;
+        text-align: center;
+
+    }
+
+    .sec3 .sec3-p {
+        width: 100%;
+    }
+
+    .sec4 .sec4-h1 {
+        text-align: center;
+    }
+
+    .sec4 .sec4-p {
+        width: 100%;
+    }
+    .sec4 .row .col{
+        display: block;
+    }
+    .sec4 .row .col .card{
+        width: 80%;
+        margin: 30px auto;
+    }
+    .sec5 .row {
+        display: block;
+    }
+
+    .sec5 .row .col {
+        width: 100%;
+        text-align: center;
+        /* padding: 0px 20px 0px 50px; */
+    }
+
+    /* .sec3 .row .col{ */
+    /* width: 80%; */
+    /* text-align: center; */
+    /* margin: 0px 20px 0px 70px; */
+
+    .sec5 .row .col1 {
+        width: 100%;
+        text-align: center;
+
+    }
+    .sec5 .sec5-h2{
+        text-align: center;
+    }
+
+    .sec5 .sec5-p {
+        width: 100%;
+        text-align: center;
+    }
+    .sec6 .card{
+        align-items: center;
+    }
+    .sec6  .card-img{
+        width: 30%;
+    }
+    .sec6 .card-text{
+        text-align: center;
+        
+    }
+    .sec6 .card-text .card-p{
+        width: 100%;
+        font-size: 25px;
+    }
+   .sec7 .sub{
+    width: 100%;
+   }
+   .sec7 .sec7-p{
+    width: 100%;
+   }
+   .foot .row {
+        display: block;
+    }
+
+    .foot .row .col-4 {
+        width: 100%;
+        text-align: center;
+    }
+    .foot .row .col-6 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footdata .row .col {
+        width: 100%;
+    }
+    .foot-text .foot-p{
+        margin: 20px auto;
+
+    }
+
+
+}
+
+@media only screen and (max-width:576px) {
+    .nav-ul {
+        display: none;
+
+    }
+
+    .icons .search {
+        display: none;
+    }
+
+    .icons .search {
+        display: none;
+    }
+
+    .icons .bar {
+        display: block;
+    }
+
+    .card-menu .row .col {
+        width: 100%;
+    }
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Grid</title>
+
+    <style>
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .product-card {
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: center;
+            background-color: white;
+            box-shadow: 0 2px 5px gray;
+        }
+
+        .product-card img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .product-card h3 {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+     <h2>Products</h2>
+
+    <section class="product-grid">
+
+        <div class="product-card">
+            <img src="/S04/samsung.jpg" alt="Product">
+            <h3>Smartphone</h3>
+        </div>
+
+        <div class="product-card">
+            <img src="/S07/laptop.jpg" alt="Product">
+            <h3>Laptop</h3>
+        </div>
+
+        <div class="product-card">
+            <img src="/S07/headphone.jpg" alt="Product">
+            <h3>Headphones</h3>
+        </div>
+
+        <div class="product-card">
+            <img src="/S07/smartwatch.jpg" alt="Product">
+            <h3>Smart Watch</h3>
+        </div>
+
+        <div class="product-card">
+            <img src="/S07/shoes.jpg" alt="Product">
+            <h3>Shoes</h3>
+        </div>
+
+        <div class="product-card">
+            <img src="/S07/bagpack.jpg" alt="Product">
+            <h3>Backpack</h3>
+        </div>
+
+    </section>
+</body>
+</html>

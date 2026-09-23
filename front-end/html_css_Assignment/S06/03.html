@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Tile</title>
+
+    <style>
+        .product {
+            width: 300px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 2px solid #ddd;
+            text-align: center;
+        }
+
+        .product img {
+            width: 200px;
+            display: block;
+            margin: auto;
+        }
+
+        .product-name {
+            display: block;
+            margin: 15px 0;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .price {
+            display: inline-block;
+            font-size: 18px;
+            color: green;
+            font-weight: bold;
+        }
+
+        /* Adding this class hides the price */
+        .hidden-price {
+            display: none;
+        }
+
+        button {
+            display: inline-block;
+            padding: 10px 15px;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+     <div class="product">
+
+        <img src="/S04/samsung.jpg" alt="Smartphone" class="product-image">
+
+        <div class="product-name">
+            <h2>Samsung Galaxy S21</h2>
+        </div>
+
+        <!-- Remove hidden-price to display the price -->
+        <span class="price hidden-price">
+            ₹30,000
+        </span> <br>
+
+        <button>Add to Cart</button>
+
+    </div>
+</body>
+</html>

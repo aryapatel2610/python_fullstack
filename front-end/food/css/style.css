@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+#header {
+    background: url("/food/css/images/header-img.png");
+    padding: 10px 0px;
+    background-size: 100% 100%;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav .logo {
+    width: 60px;
+}
+
+.nav-ul .nav-li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.nav-li .nav-a {
+    font-size: 21px;
+    color: #ffffff;
+    font-weight: 100;
+    font-family: "Montserrat";
+    text-decoration: none;
+}
+
+.icons i {
+    font-size: 21px;
+    color: #ffffff;
+}
+
+.icons .bar {
+    display: none;
+}
+
+.header-content {
+    padding: 70px 0px;
+}
+
+.header-content .header-h1 {
+    font-size: clamp(20px, 7.5vw, 89px);
+    color: #ffffff;
+    font-weight: 400;
+    font-family: "Abril Fatface";
+}
+
+.header-content .header-p {
+    font-size: clamp(16px, 3.4vw, 30px);
+    color: #ffffff;
+    font-weight: 100;
+    font-family: "Montserrat";
+    width: 50%;
+    margin: 30px 0px;
+}
+
+.header-content .btn-header {
+    font-size: clamp(16px, 3vw, 25px);
+    text-transform: uppercase;
+    color: #222222;
+    font-weight: 100;
+    font-family: "Montserrat";
+    text-align: center;
+    background-color: #ffffff;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 30px;
+}
+
+/*  */
+#menu {
+    background-color: #222222;
+    padding: 70px 0px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+#menu::after {
+    content: url("/food/css/images/Design.png");
+    position: absolute;
+    /* top: 0; */
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.menu-content {
+    text-align: center;
+    color: #ffffff;
+}
+
+.menu-content .menu-h2 {
+    font-size: clamp(20px, 6.5vw, 64px);
+    font-weight: 400;
+    font-family: "Abril Fatface";
+}
+
+.menu-content .menu-p {
+    font-size: 25px;
+    font-size: clamp(16px, 4.2vw, 25px);
+    font-weight: 100;
+    font-family: "Montserrat";
+    width: 50%;
+    margin: 20px auto;
+}
+
+.card-menu .row {
+    display: flex;
+}
+
+.card-menu .row .col {
+    width: 33.33%;
+    /* border: 2px solid white; */
+}
+
+.card .card-img {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.card-text {
+    font-family: "Montserrat";
+    text-align: center;
+    color: #ffffff;
+    margin: 20px 0px;
+}
+
+.card-text .card-h4 {
+    font-size: 28px;
+    font-weight: 100;
+}
+
+.card-text .card-p {
+    font-size: 17px;
+    font-weight: 100;
+    width: 70%;
+    margin: 0 auto;
+}
+
+#sec3 {
+    padding: 70px 0px;
+    background-image: url("/food/css/images/sec3.png");
+    background-size: 100% 100%;
+}
+
+.sec3 .row {
+    display: flex;
+}
+
+.sec3 .row .col {
+    width: 50%;
+    /* border: 2px solid white; */
+    padding: 40px 0px;
+}
+
+.sec3 .sec3-h2 {
+
+    font-size: clamp(20px, 7.5vw, 75px);
+    color: #ffffff;
+    font-weight: 400;
+    font-family: "Abril Fatface";
+}
+
+.sec3 .sec3-p {
+    font-size: clamp(16px, 3.4vw, 30px);
+    color: #ffffff;
+    font-weight: 100;
+    font-family: "Montserrat";
+    width: 80%;
+    margin: 30px 0px;
+}
+
+.sec3 .sec3-btn {
+    font-size: clamp(16px, 3vw, 25px);
+    text-transform: uppercase;
+    color: #222222;
+    font-weight: 100;
+    font-family: "Montserrat";
+    text-align: center;
+    background-color: #ffffff;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 30px;
+}
+
+#foot {
+    background-color: black;
+    padding: 70px 0px;
+}
+
+.foot .row {
+    display: flex;
+}
+
+.foot .row .col-4 {
+    width: 40%;
+}
+
+.foot .row .col-6 {
+    width: 60%;
+}
+
+.footdata .row {
+    display: flex;
+}
+
+.footdata .row .col {
+    width: 33.33%;
+}
+
+.foot-text .foot-h3 {
+    font-size: clamp(18px, 4vw, 35px);
+    color: #ffffff;
+    font-weight: 100;
+    font-family: "Montserrat";
+}
+
+.foot-ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.foot-ul .foot-li {
+    margin: 10px 0px;
+}
+
+.foot-ul .foot-li .foot-a {
+    font-size: clamp(16px, 3vw, 25px);
+    color: #ffffff;
+    font-weight: 100;
+    font-family: "Montserrat";
+    text-decoration: none;
+}
+
+.foot-text .foot-p {
+    width: 90%;
+     font-size: clamp(16px, 3vw, 25px);
+    color: #ffffff;
+    font-weight: 100;
+    font-family: "Montserrat";
+    margin: 20px 0px;
+}

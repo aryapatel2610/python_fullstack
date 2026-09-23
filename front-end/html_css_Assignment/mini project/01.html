@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Music Links & Gamer Tag</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f5f7;
+            color: #222;
+        }
+
+        /* =========================
+           MAIN CONTAINER
+        ========================= */
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: 40px auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #777;
+            margin-bottom: 30px;
+        }
+
+
+        /* =========================
+           FORM
+        ========================= */
+
+        .music-form {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .input-group {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .input-group img {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+
+            width: 25px;
+            height: 25px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 15px 15px 15px 55px;
+
+            border: 1px solid #ddd;
+            border-radius: 10px;
+
+            font-size: 15px;
+            outline: none;
+        }
+
+        .input-group input:focus {
+            border-color: #6c63ff;
+        }
+
+
+        /* Submit button */
+
+        .submit-btn {
+            display: block;
+            width: 100%;
+
+            padding: 14px;
+
+            border: none;
+            border-radius: 10px;
+
+            background: #6c63ff;
+            color: white;
+
+            font-size: 16px;
+            font-weight: bold;
+
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .submit-btn:hover {
+            background: #5148d8;
+        }
+
+
+        /* =========================
+           HIDDEN CHECKBOX
+        ========================= */
+
+        #showPreview {
+            display: none;
+        }
+
+
+        /* =========================
+           PREVIEW SECTION
+        ========================= */
+
+        .preview-section {
+            display: none;
+            margin-top: 35px;
+        }
+
+        /*
+           When checkbox is checked,
+           preview section becomes visible.
+        */
+
+        #showPreview:checked ~ .preview-section {
+            display: block;
+        }
+
+
+        .preview-title {
+            margin-bottom: 20px;
+        }
+
+
+        /* =========================
+           PREVIEW CARDS
+        ========================= */
+
+        .preview-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            background: white;
+
+            padding: 18px;
+            margin-bottom: 15px;
+
+            border-radius: 12px;
+
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+
+        .preview-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+
+        .preview-info img {
+            width: 45px;
+            height: 45px;
+        }
+
+
+        .preview-info h3 {
+            margin-bottom: 5px;
+        }
+
+
+        .preview-info p {
+            color: #777;
+            font-size: 14px;
+        }
+
+
+        /* Visit Button */
+
+        .visit-btn {
+            text-decoration: none;
+
+            padding: 10px 20px;
+
+            border-radius: 8px;
+
+            color: white;
+
+            font-weight: bold;
+        }
+
+
+        /* =========================
+           PLATFORM COLORS
+        ========================= */
+
+        .spotify {
+            border-left: 6px solid #1DB954;
+        }
+
+        .spotify .visit-btn {
+            background: #1DB954;
+        }
+
+
+        .youtube {
+            border-left: 6px solid #FF0000;
+        }
+
+        .youtube .visit-btn {
+            background: #FF0000;
+        }
+
+
+        .apple {
+            border-left: 6px solid #FA233B;
+        }
+
+        .apple .visit-btn {
+            background: #FA233B;
+        }
+
+
+        /* =========================
+           GAMER TAG
+        ========================= */
+
+        .gamer-section {
+            margin-top: 70px;
+
+            padding: 60px 20px;
+
+            background: #151515;
+            color: white;
+        }
+
+
+        .gamer-profile {
+            max-width: 900px;
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: 250px 1fr;
+
+            gap: 40px;
+
+            align-items: center;
+        }
+
+
+        .avatar {
+            width: 220px;
+            height: 220px;
+
+            border-radius: 50%;
+
+            object-fit: cover;
+
+            border: 5px solid #9147ff;
+
+            display: block;
+
+            margin: auto;
+        }
+
+
+        .gamer-info h2 {
+            font-size: 40px;
+
+            color: #9147ff;
+
+            margin-bottom: 10px;
+        }
+
+
+        .gamer-info p {
+            color: #bbb;
+
+            margin-bottom: 25px;
+        }
+
+
+        /* Gamer buttons */
+
+        .gamer-links {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 15px;
+        }
+
+
+        .gamer-links a {
+            text-decoration: none;
+
+            color: white;
+
+            padding: 13px 25px;
+
+            border-radius: 10px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+
+        .gamer-links a:hover {
+            transform: translateY(-4px);
+        }
+
+
+        .twitch {
+            background: #9147ff;
+        }
+
+
+        .discord {
+            background: #5865F2;
+        }
+
+
+        .steam {
+            background: #1b2838;
+        }
+
+
+        /* =========================
+           MOBILE RESPONSIVE
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            .container {
+                width: 94%;
+            }
+
+
+            .preview-card {
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                gap: 15px;
+            }
+
+
+            .visit-btn {
+                width: 100%;
+
+                text-align: center;
+            }
+
+
+            .gamer-profile {
+                grid-template-columns: 1fr;
+
+                text-align: center;
+            }
+
+
+            .gamer-info h2 {
+                font-size: 30px;
+            }
+
+
+            .gamer-links {
+                justify-content: center;
+            }
+
+
+            .gamer-links a {
+                width: 100%;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+<!-- =================================
+     MUSIC LINKS
+================================= -->
+
+<div class="container">
+
+    <h1>🎵 Music Links</h1>
+
+    <p class="subtitle">
+        Add your music profile links
+    </p>
+
+
+    <!-- Hidden checkbox -->
+
+    <input type="checkbox" id="showPreview">
+
+
+    <!-- FORM -->
+
+    <form class="music-form">
+
+
+        <!-- Spotify -->
+
+        <div class="input-group">
+
+            <img
+                src="https://cdn.simpleicons.org/spotify/1DB954"
+                alt="Spotify">
+
+            <input
+                type="url"
+                placeholder="Spotify profile URL"
+                required>
+
+        </div>
+
+
+        <!-- YouTube Music -->
+
+        <div class="input-group">
+
+            <img
+                src="https://cdn.simpleicons.org/youtubemusic/FF0000"
+                alt="YouTube Music">
+
+            <input
+                type="url"
+                placeholder="YouTube Music profile URL"
+                required>
+
+        </div>
+
+
+        <!-- Apple Music -->
+
+        <div class="input-group">
+
+            <img
+                src="https://cdn.simpleicons.org/applemusic/FA233B"
+                alt="Apple Music">
+
+            <input
+                type="url"
+                placeholder="Apple Music profile URL"
+                required>
+
+        </div>
+
+
+        <!-- Label works as Submit -->
+
+        <label for="showPreview" class="submit-btn">
+            Add Music Links
+        </label>
+
+    </form>
+
+
+    <!-- =================================
+         PREVIEW SECTION
+    ================================= -->
+
+    <div class="preview-section">
+
+        <h2 class="preview-title">
+            Music Link Preview
+        </h2>
+
+
+        <!-- Spotify -->
+
+        <div class="preview-card spotify">
+
+            <div class="preview-info">
+
+                <img
+                    src="https://cdn.simpleicons.org/spotify/1DB954"
+                    alt="Spotify">
+
+                <div>
+
+                    <h3>Spotify</h3>
+
+                    <p>@artistname</p>
+
+                </div>
+
+            </div>
+
+
+            <a
+                href="https://open.spotify.com/"
+                target="_blank"
+                class="visit-btn">
+
+                Visit
+
+            </a>
+
+        </div>
+
+
+        <!-- YouTube -->
+
+        <div class="preview-card youtube">
+
+            <div class="preview-info">
+
+                <img
+                    src="https://cdn.simpleicons.org/youtubemusic/FF0000"
+                    alt="YouTube Music">
+
+                <div>
+
+                    <h3>YouTube Music</h3>
+
+                    <p>@artistname</p>
+
+                </div>
+
+            </div>
+
+
+            <a
+                href="https://music.youtube.com/"
+                target="_blank"
+                class="visit-btn">
+
+                Visit
+
+            </a>
+
+        </div>
+
+
+        <!-- Apple Music -->
+
+        <div class="preview-card apple">
+
+            <div class="preview-info">
+
+                <img
+                    src="https://cdn.simpleicons.org/applemusic/FA233B"
+                    alt="Apple Music">
+
+                <div>
+
+                    <h3>Apple Music</h3>
+
+                    <p>@artistname</p>
+
+                </div>
+
+            </div>
+
+
+            <a
+                href="https://music.apple.com/"
+                target="_blank"
+                class="visit-btn">
+
+                Visit
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =================================
+     GAMER TAG BIO PAGE
+================================= -->
+
+<section class="gamer-section">
+
+    <div class="gamer-profile">
+
+
+        <!-- Avatar -->
+
+        <div>
+
+            <img
+                src="https://i.pravatar.cc/400?img=12"
+                alt="Gamer Avatar"
+                class="avatar">
+
+        </div>
+
+
+        <!-- Gamer Information -->
+
+        <div class="gamer-info">
+
+            <h2>ShadowX</h2>
+
+            <p>
+                🎮 Competitive Gamer |
+                🎧 Streamer |
+                🏆 Esports Lover
+            </p>
+
+
+            <div class="gamer-links">
+
+                <a
+                    href="https://www.twitch.tv/"
+                    target="_blank"
+                    class="twitch">
+
+                    🎥 Twitch
+
+                </a>
+
+
+                <a
+                    href="https://discord.com/"
+                    target="_blank"
+                    class="discord">
+
+                    💬 Discord
+
+                </a>
+
+
+                <a
+                    href="https://store.steampowered.com/"
+                    target="_blank"
+                    class="steam">
+
+                    🎮 Steam
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</body>
+</html>

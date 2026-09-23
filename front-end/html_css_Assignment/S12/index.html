@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Music Artist Landing Page</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #212529, #6f42c1);
+            color: white;
+            padding: 70px 20px;
+        }
+
+        .artist-img {
+            width: 220px;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid white;
+        }
+
+        .social-btn {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin: 5px;
+        }
+
+        .playlist-img {
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .product-img {
+            height: 180px;
+            object-fit: contain;
+            padding: 15px;
+        }
+
+        .card {
+            border: none;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        footer {
+            background-color: #212529;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- 1 & 4. Sticky Bootstrap Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+
+        <a class="navbar-brand fw-bold" href="#">
+            <i class="bi bi-music-note-beamed"></i> MusicVibe
+        </a>
+
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarMenu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#home">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#playlists">Playlists</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#products">Products</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</nav>
+
+
+<!-- 1. Music Artist Hero Section -->
+<section id="home" class="hero text-center">
+
+    <div class="container">
+
+        <img src="https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?auto=format&fit=crop&w=500&q=80"
+             class="artist-img mb-4"
+             alt="Music Artist">
+
+        <h1 class="display-4 fw-bold">Aria Williams</h1>
+
+        <p class="lead">
+            Singer • Songwriter • Music Producer
+        </p>
+
+        <p class="mx-auto" style="max-width: 650px;">
+            Aria Williams is an independent music artist creating
+            soulful melodies and energetic tracks that connect
+            people through music.
+        </p>
+
+        <!-- Bootstrap Icons Social Buttons -->
+        <div class="mt-4">
+
+            <a href="#" class="btn btn-danger social-btn">
+                <i class="bi bi-instagram"></i>
+            </a>
+
+            <a href="#" class="btn btn-primary social-btn">
+                <i class="bi bi-facebook"></i>
+            </a>
+
+            <a href="#" class="btn btn-dark social-btn">
+                <i class="bi bi-youtube"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- About Section -->
+<section id="about" class="py-5">
+
+    <div class="container text-center">
+
+        <h2 class="fw-bold mb-3">About the Artist</h2>
+
+        <p class="text-muted mx-auto" style="max-width: 700px;">
+            Music is more than sound — it is an emotion.
+            Aria combines pop, acoustic and electronic sounds
+            to create music for every mood.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- 2. Featured Playlists -->
+<section id="playlists" class="py-5 bg-light">
+
+    <div class="container">
+
+        <h2 class="text-center fw-bold mb-5">
+            Featured Playlists
+        </h2>
+
+        <div class="row g-4">
+
+            <!-- Playlist 1 -->
+            <div class="col-md-4 col-12">
+
+                <div class="card h-100 shadow-sm">
+
+                    <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=600&q=80"
+                         class="card-img-top playlist-img"
+                         alt="Chill Vibes">
+
+                    <div class="card-body text-center">
+
+                        <h5 class="card-title fw-bold">
+                            Chill Vibes
+                        </h5>
+
+                        <p class="text-muted">
+                            Relaxing songs for peaceful moments.
+                        </p>
+
+                        <a href="#" class="btn btn-dark">
+                            <i class="bi bi-play-fill"></i>
+                            Listen Now
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Playlist 2 -->
+            <div class="col-md-4 col-12">
+
+                <div class="card h-100 shadow-sm">
+
+                    <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=600&q=80"
+                         class="card-img-top playlist-img"
+                         alt="Party Hits">
+
+                    <div class="card-body text-center">
+
+                        <h5 class="card-title fw-bold">
+                            Party Hits
+                        </h5>
+
+                        <p class="text-muted">
+                            Energetic tracks for your party.
+                        </p>
+
+                        <a href="#" class="btn btn-dark">
+                            <i class="bi bi-play-fill"></i>
+                            Listen Now
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Playlist 3 -->
+            <div class="col-md-4 col-12">
+
+                <div class="card h-100 shadow-sm">
+
+                    <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=600&q=80"
+                         class="card-img-top playlist-img"
+                         alt="Workout Beats">
+
+                    <div class="card-body text-center">
+
+                        <h5 class="card-title fw-bold">
+                            Workout Beats
+                        </h5>
+
+                        <p class="text-muted">
+                            High-energy music for your workout.
+                        </p>
+
+                        <a href="#" class="btn btn-dark">
+                            <i class="bi bi-play-fill"></i>
+                            Listen Now
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- 3. Flipkart Style Product Showcase -->
+<section id="products" class="py-5">
+
+    <div class="container">
+
+        <h2 class="text-center fw-bold mb-5">
+            Featured Products
+        </h2>
+
+        <div class="row g-4">
+
+            <!-- Product 1 -->
+            <div class="col-md-3 col-6">
+
+                <div class="card h-100 shadow-sm">
+
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=500&q=80"
+                         class="card-img-top product-img"
+                         alt="Headphones">
+
+                    <div class="card-body text-center">
+
+                        <h6 class="fw-bold">
+                            Wireless Headphones
+                        </h6>
+
+                        <p class="text-success fw-bold">
+                            ₹1,999
+                        </p>
+
+                        <button class="btn btn-primary btn-sm">
+                            Buy Now
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Product 2 -->
+            <div class="col-md-3 col-6">
+
+                <div class="card h-100 shadow-sm">
+
+                    <img src="https://images.unsplash.com/photo-1598387993281-cecf8b71a8f8?auto=format&fit=crop&w=500&q=80"
+                         class="card-img-top product-img"
+                         alt="Microphone">
+
+                    <div class="card-body text-center">
+
+                        <h6 class="fw-bold">
+                            Studio Microphone
+                        </h6>
+
+                        <p class="text-success fw-bold">
+                            ₹2,499
+                        </p>
+
+                        <button class="btn btn-primary btn-sm">
+                            Buy Now
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Product 3 -->
+            <div class="col-md-3 col-6">
+
+                <div class="card h-100 shadow-sm">
+
+                    <img src="https://images.unsplash.com/photo-1525201548942-d8732f6617a0?auto=format&fit=crop&w=500&q=80"
+                         class="card-img-top product-img"
+                         alt="Guitar">
+
+                    <div class="card-body text-center">
+
+                        <h6 class="fw-bold">
+                            Acoustic Guitar
+                        </h6>
+
+                        <p class="text-success fw-bold">
+                            ₹5,999
+                        </p>
+
+                        <button class="btn btn-primary btn-sm">
+                            Buy Now
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Product 4 -->
+            <div class="col-md-3 col-6">
+
+                <div class="card h-100 shadow-sm">
+
+                    <img src="https://images.unsplash.com/photo-1545128485-c400e7702796?auto=format&fit=crop&w=500&q=80"
+                         class="card-img-top product-img"
+                         alt="Speaker">
+
+                    <div class="card-body text-center">
+
+                        <h6 class="fw-bold">
+                            Bluetooth Speaker
+                        </h6>
+
+                        <p class="text-success fw-bold">
+                            ₹2,999
+                        </p>
+
+                        <button class="btn btn-primary btn-sm">
+                            Buy Now
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- 5. Footer -->
+<footer id="contact" class="py-5">
+
+    <div class="container text-center">
+
+        <h4 class="fw-bold mb-3">
+            MusicVibe
+        </h4>
+
+        <p class="text-secondary">
+            Follow Aria Williams on social media
+        </p>
+
+        <!-- Instagram-style Social Icons -->
+        <div class="mb-3">
+
+            <a href="#" class="text-white fs-3 mx-2">
+                <i class="bi bi-instagram"></i>
+            </a>
+
+            <a href="#" class="text-white fs-3 mx-2">
+                <i class="bi bi-facebook"></i>
+            </a>
+
+            <a href="#" class="text-white fs-3 mx-2">
+                <i class="bi bi-twitter-x"></i>
+            </a>
+
+            <a href="#" class="text-white fs-3 mx-2">
+                <i class="bi bi-youtube"></i>
+            </a>
+
+        </div>
+
+        <hr>
+
+        <p class="mb-0 text-secondary">
+            © 2026 MusicVibe. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+</body>
+</html>
