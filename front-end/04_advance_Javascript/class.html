@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+      class BankAccount {
+    constructor(bankName, username, balance) {
+        this.bankName = bankName;
+        this.username = username;
+        this.balance = balance;
+    }
+
+    deposit(amount) {
+        this.balance += amount;
+        console.log("Deposit Amount:", amount);
+        console.log("New Balance:", this.balance);
+    }
+
+    withdraw(amount) {
+        if (amount <= this.balance) {
+            this.balance -= amount;
+            console.log("Withdraw Amount:", amount);
+            console.log("New Balance:", this.balance);
+        } else {
+            console.log("Insufficient Balance!");
+            console.log("Available Balance:", this.balance);
+        }
+    }
+
+    showDetails() {
+        console.log("Bank Name:", this.bankName);
+        console.log("Username:", this.username);
+        console.log("Balance:", this.balance);
+    }
+}
+
+
+// Object create
+let account = new BankAccount("SBI", "Arya", 1000);
+
+account.showDetails();
+
+account.deposit(2000);
+
+account.withdraw(1500);
+    
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css"
+    />
+
+    <!-- Demo styles -->
+    <style>
+      html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+
+      body {
+        background: #000;
+        font-family:
+          Helvetica Neue,
+          Helvetica,
+          Arial,
+          sans-serif;
+        font-size: 14px;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background: #fff;
+        font-family:
+          Helvetica Neue,
+          Helvetica,
+          Arial,
+          sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      }
+
+      html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .swiper {
+        width: 240px;
+        height: 320px;
+      }
+
+      .swiper-slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 18px;
+        font-size: 22px;
+        font-weight: bold;
+        color: #fff;
+      }
+
+      .swiper-slide:nth-child(1n) {
+        background-color: rgb(206, 17, 17);
+      }
+
+      .swiper-slide:nth-child(2n) {
+        background-color: rgb(0, 140, 255);
+      }
+
+      .swiper-slide:nth-child(3n) {
+        background-color: rgb(10, 184, 111);
+      }
+
+      .swiper-slide:nth-child(4n) {
+        background-color: rgb(211, 122, 7);
+      }
+
+     
+    </style>
+  </head>
+
+  <body>
+    <!-- Swiper -->
+
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="/image/1.jpeg" alt=""></div>
+        <div class="swiper-slide"><img src="/image/2.jpeg" alt=""></div>
+        <div class="swiper-slide"><img src="/image/3.jpeg" alt=""></div>
+        <div class="swiper-slide"><img src="/image/4.jpeg" alt=""></div>
+       
+      </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper('.mySwiper', {
+        effect: 'cards',
+        grabCursor: true,
+      });
+
+       let img_tag = document.getElementsByClassName("img")
+        console.log(img_tag)
+
+        let index = 0 
+
+        function slider(){
+
+            for(let i=0;i<img_tag.length;i++){
+                img_tag[i].style.display = "none"
+            }
+            img_tag[index].style.display = "block"
+            index++;
+
+            if(index == 4){
+                index = 0
+            }
+
+            setTimeout(slider,9000)
+
+        }
+slider()
+        
+    </script>
+  </body>
+</html>

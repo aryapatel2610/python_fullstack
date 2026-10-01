@@ -1,0 +1,125 @@
+  <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+
+<body>
+
+    <form onsubmit="return validateForm()">
+
+        <label>First Name:</label>
+        <input type="text" id="name" required>
+        <br><br>
+
+        <label>Last Name:</label>
+        <input type="text" id="lastname" required>
+        <br><br>
+
+        <label>Email:</label>
+        <input type="email" id="email" required>
+        <br><br>
+
+        <label>Phone Number:</label>
+        <input type="text" id="phone" required>
+        <br><br>
+
+        <label>Password:</label>
+        <input type="password" id="password" required>
+        <br><br>
+
+        <label>Confirm Password:</label>
+        <input type="password" id="confirmPassword" required>
+        <br><br>
+
+        <button type="submit">Submit</button>
+
+    </form>
+
+    <p id="message"></p>
+
+
+    <script>
+
+        function validateForm() {
+
+            let name = document.getElementById("name").value;
+            let lastname = document.getElementById("lastname").value;
+            let email = document.getElementById("email").value;
+            let phone = document.getElementById("phone").value;
+            let password = document.getElementById("password").value;
+            let confirmPassword = document.getElementById("confirmPassword").value;
+
+
+            let namePattern = /^[A-Za-z]+$/;
+
+            if (!namePattern.test(name)) {
+                document.getElementById("message").innerHTML =
+                    "Name only characters allowed.";
+
+                return false;
+            }
+            
+
+            if (!namePattern.test(lastname)) {
+                document.getElementById("message").innerHTML =
+                    "Last Name only characters allowed.";
+
+                return false;
+            }
+
+
+
+            if (name.toLowerCase() === lastname.toLowerCase()) {
+                document.getElementById("message").innerHTML =
+                    "Name and Last Name should be different.";
+
+                return false;
+            }
+
+
+
+            let phonePattern = /^[0-9]{10}$/;
+
+            if (!phonePattern.test(phone)) {
+                document.getElementById("message").innerHTML =
+                    "Phone Number exactly 10 digits.";
+
+                return false;
+            }
+
+            let passwordPattern =
+                /^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[^A-Za-z0-9]).{8,12}$/;
+
+            if (!passwordPattern.test(password)) {
+                document.getElementById("message").innerHTML =
+                    "Password 8-12 characters ka hona chahiye aur usme 1 Capital, 1 Small, 1 Number aur 1 Special Character hona chahiye.";
+
+                return false;
+            }
+
+
+
+            if (password !== confirmPassword) {
+                document.getElementById("message").innerHTML =
+                    "Password aur Confirm Password same hona chahiye.";
+
+                return false;
+            }
+
+
+
+            document.getElementById("message").innerHTML =
+                "Form successfully submitted!";
+
+            return false;
+        }
+
+    </script>
+
+</body>
+
+</html>

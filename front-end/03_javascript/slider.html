@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <i class="fa-solid fa-less-than" id="a"></i>
+    <i  class="fa-solid fa-greater-than" id="b"></i>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+        integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+        
+ <button onclick="slider()"class="fa-solid fa-less-than" id="a"></button>
+ <button onclick="slider()" class="fa-solid fa-greater-than" id="b"></button>
+    <title>Document</title>
+    <style>
+        .main{
+            height: 500px;
+            width: 100%;
+            overflow: hidden;
+        }
+        #a{
+            position: absolute;
+            top: 30%;
+            left: 10px;
+            font-size: 50px;
+            background-color: transparent;
+            border: none;
+            color: rgb(129, 164, 189);
+        }
+        #b{
+            position: absolute;
+            top: 30%;
+            right: 10px;
+            font-size: 50px;
+            background-color: transparent;
+            border: none;
+            color: rgb(129, 164, 189);
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+       
+        <img src="/image/1.jpeg" height="100%" width="100%" class="img"  alt="">
+        <img src="/image/2.jpeg" height="100%" width="100%" class="img" alt="">
+        <img src="/image/3.jpeg" height="100%" width="100%" class="img" alt="">
+        <img src="/image/4.jpeg"  height="100%" width="100%" class="img" alt="">
+    </div>
+
+    <img src="" alt="">
+    
+
+    <script>
+
+        let img_tag = document.getElementsByClassName("img")
+        console.log(img_tag)
+
+        let index = 0 
+
+        function slider(){
+
+            for(let i=0;i<img_tag.length;i++){
+                img_tag[i].style.display = "none"
+            }
+            img_tag[index].style.display = "block"
+            index++;
+
+            if(index == 4){
+                index = 0
+            }
+
+            setTimeout(slider,9000)
+
+        }
+slider()
+        
+
+    </script>
+
+</body>
+</html>

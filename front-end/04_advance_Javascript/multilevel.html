@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class A {
+            x = function demo() {
+                console.log("A Class")
+            }
+        }
+
+        class B extends A {
+            y = function test() {
+                console.log("B class")
+            }
+        }
+         class C extends B {
+            Z = function test() {
+                console.log("C class")
+            }
+        }
+
+
+        const user = new C
+        user.y()
+        user.x()
+        user.Z()
+    </script>
+</body>
+</html>
